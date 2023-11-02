@@ -91,7 +91,8 @@ const ConnectedInner = ({ username }: { username: string }) => {
             <p style={{ color: "#999" }}>
               view on{" "}
               <a
-                href={`https://testnets.opensea.io/assets/base-goerli/${DEV_CAT_CONTRACT.toLowerCase()}/${
+                /////////////href={`https://testnets.opensea.io/assets/base-goerli/${DEV_CAT_CONTRACT.toLowerCase()}/${
+                href={`https://opensea.io/assets/matic/${DEV_CAT_CONTRACT.toLowerCase()}/${
                   ownedNFTs[0].metadata.id
                 }`}
                 target="_blank"
