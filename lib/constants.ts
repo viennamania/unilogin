@@ -1,8 +1,14 @@
-import { Goerli, BaseGoerli } from "@thirdweb-dev/chains";
+import {
+  Goerli,
+  BaseGoerli,
+  Polygon,
+} from "@thirdweb-dev/chains";
 
 export const THIRDWEB_API_KEY = process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID;
 
-export const chain = BaseGoerli;
+//export const chain = BaseGoerli;
+export const chain = Polygon;
+
 
 const chainInfos = {
   [Goerli.chainId]: {
@@ -13,7 +19,13 @@ const chainInfos = {
     factoryAddress: "0x2637758c0777d58E3278A6022730e997A83d04bF",
     openEditionContract: "0x4EFe47576E48cC383805A9E8FC3e02Ddb1a5D535",
   },
+  [Polygon.chainId]: {
+    factoryAddress: "0xf7c004c916b58d6e7b3a470580442e5aaf676f0b",
+    openEditionContract: "0x46F8eaE0b0A751B4D5eDa8386Fd3C49fc24618BC",
+  },
 } as const;
+
+
 
 export const DEV_CAT_CONTRACT = chainInfos[chain.chainId].openEditionContract;
 export const factoryAddress = chainInfos[chain.chainId].factoryAddress;
